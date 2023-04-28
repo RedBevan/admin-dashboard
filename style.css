@@ -5,10 +5,10 @@
   font-family: 'Ysabeau', sans-serif;
 }
 
-.grid {
+.page-grid {
   display: grid;
   grid-template-columns: 1fr 3.5fr;
-  grid-template-rows: 1fr 3.5fr 0.5fr;
+  grid-template-rows: 0.5fr 3.5fr 0.5fr;
   width: 100vw;
   height: 100vh;
 }
@@ -85,6 +85,51 @@
 .header {
   background-color: #3ACDFF;
   grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header>.header-grid {
+  display: grid;
+  margin: 10px;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows 1fr 1.5fr;
+  grid-gap: 15px;
+
+}
+
+.header>.header-grid>.search-bar {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.header>.header-grid>.search-bar>img {
+  height: 15px;
+  margin-right: 5px;
+}
+
+.header>.header-grid>.search-bar>input {
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid #FF633A;
+  width: 300px;
+
+}
+
+.header>.header-grid>.header-profile {
+ grid-row: 1 / 2;
+ grid-column: 2 / 3;
+}
+
+.header>.header-grid>.welcome-message {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.header>.header-grid>.header-buttons {
+  grid-row: 2 / 3;
   grid-column: 2 / 3;
 }
 
